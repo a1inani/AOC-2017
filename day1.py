@@ -1,15 +1,19 @@
 def day1(numlist):
     numsum1 = 0
+    #iterate through list of digits
     for x in range(0, len(numlist)-1):
-        if numlist[x
-        ] == numlist[x+1]:
+        #check if an item matches the one that follows it
+        if numlist[x] == numlist[x+1]:
+            #if true, add number to total
             numsum1 += int(numlist[x])
+    #if the first number matches the last one
     if numlist[0] == numlist[-1]:
         numsum1 += int(numlist[0])
     print("Part 1")
     print(numsum1)
     numsum2 = 0
     for x in range(0, len(numlist)):
+        #modulo here is 
         if numlist[x] == numlist[(x + int(len(numlist)/2)) % len(numlist)]:
             numsum2 += int(numlist[x])
     if numlist[-1] == numlist[int(len(numlist)/2)]:
